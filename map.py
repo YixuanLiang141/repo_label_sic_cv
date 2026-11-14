@@ -18,7 +18,7 @@ def filter_large_csv_by_stay_ids(input_file, output_file, key_col, chunksize=100
         else:
             filtered_chunk.to_csv(output_file, index=False, mode='a', header=False)
 
-        print(f"✔ 已处理第 {i+1} 块，保留 {len(filtered_chunk)} 行")
+        print(f"✔ Chunk {i+1} done, {len(filtered_chunk)} rows extracted.")
 
 def process_columns_rename_time(data_file, output_file):
 
